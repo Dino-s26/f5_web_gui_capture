@@ -82,21 +82,22 @@ driver.switch_to.frame(driver.find_element_by_name("contentframe"))
 driver.implicitly_wait(250)
 
 # Find Top Country Table, This will find the Top Country Dashboard and access the table data
-driver.find_element_by_xpath("//*[@id='widget_area_id_154056']")
-wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='widget_area_id_154056']")))
-tc_submenu = driver.find_element_by_xpath("//*[@id='span_timediv_154056']")
-wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='span_timediv_154056']")))
+# <Replace with Widget ID> need to be replace with the appropriate Widget ID from the HTML of F5 HTML Web Component, since it is randomnize and could be different each platform and OS
+driver.find_element_by_xpath("//*[@id='widget_area_id_<Replace with Widget ID>']")
+wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='widget_area_id_<Replace with Widget ID>']")))
+tc_submenu = driver.find_element_by_xpath("//*[@id='span_timediv_<Replace with Widget ID>']")
+wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='span_timediv_<Replace with Widget ID>']")))
 tc_submenu.click()
 # This will access 1 Month of Data on the dashboard
-tc_1m = driver.find_element_by_xpath("//*[@id='span_timediv_154056']/div/div[4]")
-wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='span_timediv_154056']/div/div[4]")))
+tc_1m = driver.find_element_by_xpath("//*[@id='span_timediv_<Replace with Widget ID>']/div/div[4]")
+wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='span_timediv_<Replace with Widget ID>']/div/div[4]")))
 tc_1m.click()
 driver.implicitly_wait(250)
 time.sleep(5)
 
 # Save Table to PNG, for the Top Country Table
-wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='widget_area_id_154056']")))
-top_country = driver.find_element_by_xpath("//*[@id='widget_area_id_154056']").screenshot(folder+site+"-top_country-"+ddt+".png")
+wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='widget_area_id_<Replace with Widget ID>']")))
+top_country = driver.find_element_by_xpath("//*[@id='widget_area_id_<Replace with Widget ID>']").screenshot(folder+site+"-top_country-"+ddt+".png")
 driver.implicitly_wait(250)
 time.sleep(5)
 
