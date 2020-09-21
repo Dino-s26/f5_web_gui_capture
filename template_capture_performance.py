@@ -25,6 +25,10 @@ check_folder = Path(folder).mkdir(parents=True, exist_ok=True)
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--ignore-ssl-errors')
+
+# If You need to utilize in background capture, you can uncomment this line. This will help to run the script in background without any interruption.
+#options.add_argument('--headless')
+
 driver = webdriver.Chrome(chrome_options=options, executable_path=<Replace with path to your chrome driver>+"\driver\chromedriver.exe")
 wait = WebDriverWait(driver, 60)
 
