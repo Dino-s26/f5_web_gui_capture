@@ -9,7 +9,6 @@ from selenium.webdriver.chrome.options import Options
 
 # Import for Path module
 from pathlib import Path
-#import urllib3
 
 #Import Base module for the code
 import os
