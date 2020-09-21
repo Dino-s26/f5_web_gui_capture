@@ -9,4 +9,7 @@ Readme for source code F5 Web GUI Capture tool. Source code free to use in any p
 5. Basic knowledge with HTML code structure, this will help to get element and troubleshooting your code.
 6. (Optional) Install Ranorex Selocity Plugin in Chrome, this will help to get web element easily without problem.
 
+** Code Explanation **
+(On Progress)
+
 **-- End of README --**
