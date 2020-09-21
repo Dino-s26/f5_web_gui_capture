@@ -31,7 +31,11 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--ignore-ssl-errors')
 options.add_argument('--disable-notifications')
+
+# If You need to utilize in background capture, you can uncomment this line. This will help to run the script in background without any interruption.
 #options.add_argument('--headless')
+
+# This Reserved for next implmentation, you can comment this line 
 options.add_experimental_option("prefs", {
 "download.default_directory": "C:\/tmp\/",
 "download.prompt_for_download": False,
@@ -39,6 +43,8 @@ options.add_experimental_option("prefs", {
 "safebrowsing_for_trusted_sources_enabled": False,
 "safebrowsing.enabled": False
 })
+# To This line
+
 driver = webdriver.Chrome(chrome_options=options, executable_path=<Replace with path to your chrome driver>+"/driver\/chromedriver.exe")
 #enable_download_headless(driver, "C:\/tmp\/")
 wait = WebDriverWait(driver, 60)
