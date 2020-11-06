@@ -83,7 +83,7 @@ wait.until(EC.staleness_of("your dropdown menu"))
 7. To capture the element, simply find the element we want to capture, then use the function .screenshot() to save it as examled below :
 ```
 wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "your CSS with -->  img")))
-driver.find_element_by_css_selector("your CSS with -->)  img").screenshot("your complete path with extention of .png / .jpg")
+driver.find_element_by_css_selector("your CSS with -->)  img").screenshot("your complete path with name and extention of .png / .jpg")
 ```
 
 Example how to use the code are in template file, feel free to modified it as suited to your need.
